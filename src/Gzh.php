@@ -12,6 +12,8 @@ class Gzh
 
     public $openid;
 
+    public $userinfo;
+
     public function __construct($app = 'default')
     {
         $this->config = config("wx.app_gzh.{$app}");
@@ -29,6 +31,18 @@ class Gzh
         $c = $this->getContents($url);
         $this->openid = $c['openid'];
 
+        return $this;
+    }
+
+    /**
+     * @return $this
+     * @throws \Exception
+     */
+    public function getUserInfo()
+    {
+        $url = "https://api.weixin.qq.com/sns/userinfo?access_token={$this->accessToken}&openid={$this->openid}&lang=zh_CN";
+        $c = $this->getContents($url);
+        $this->userinfo = $c;
         return $this;
     }
 
