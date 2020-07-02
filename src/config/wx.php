@@ -10,8 +10,8 @@ return [
             'secret'=>'',
         ],
 
-        //非住不可
-        'fzbk'=>[
+        //云店长
+        'ydz'=>[
             'appid'=>'',
             'secret'=>'',
         ],
