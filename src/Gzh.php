@@ -10,9 +10,26 @@ class Gzh
 
     public $accessToken;
 
+    public $openid;
+
     public function __construct($app = 'default')
     {
         $this->config = config("wx.app_gzh.{$app}");
+    }
+
+
+    /**
+     * @param $code
+     * @return $this
+     * @throws \Exception
+     */
+    public function getOpenid($code)
+    {
+        $url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid={$this->config['appid']}&secret={$this->config['secret']}&code={$code}&grant_type=authorization_code";
+        $c = $this->getContents($url);
+        $this->openid = $c['openid'];
+
+        return $this;
     }
 
     /**
