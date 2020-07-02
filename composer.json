@@ -1,0 +1,27 @@
+{
+    "name": "l/wx",
+    "description": "微信相关服务",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "faed",
+            "email": "327399770@qq.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Faed\\Wx\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Faed\\Wx\\WxServiceProvider"
+            ]
+        }
+    }
+}
