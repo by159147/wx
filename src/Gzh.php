@@ -47,7 +47,7 @@ class Gzh
             $data = array_merge(['url'=>$http],$data);
         }
 
-       return $this->post($url,['form_params'=>$data]);
+       return $this->post($url,$data);
     }
 
 
