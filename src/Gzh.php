@@ -63,7 +63,7 @@ class Gzh
 
             $c = $this->getContents($url);
 
-            Cache::put("access_token:{$this->config['appid']}",$c['access_token'],5);
+            Cache::put("access_token:{$this->config['appid']}",$c['access_token'],$c['expires_in']-10);
 
             $this->accessToken = $c['access_token'];
 
