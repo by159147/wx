@@ -69,7 +69,8 @@ class Gzh
         //小程序跳转
         if ($page){
             $data = array_merge($data,['miniprogram'=>[
-                'appid'=> config("wx.app_xcx.{$xcxTag}")
+                'appid'=> config("wx.app_xcx.{$xcxTag}"),
+                'pagepath'=> $page,
             ]]);
         }
 
