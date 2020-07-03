@@ -30,7 +30,7 @@ class Gzh
         $url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid={$this->config['appid']}&secret={$this->config['secret']}&code={$code}&grant_type=authorization_code";
         $c = $this->getContents($url);
         $this->openid = $c['openid'];
-
+        $this->accessToken = $c['access_token'];
         return $this;
     }
 
