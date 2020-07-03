@@ -70,7 +70,7 @@ class Gzh
         if ($page){
             $data = array_merge($data,['miniprogram'=>[
                 'appid'=> config("wx.app_xcx.{$xcxTag}.appid"),
-                'pagepath'=> $page,
+//                'pagepath'=> $page,
                 'page'=> $page,
             ]]);
         }
