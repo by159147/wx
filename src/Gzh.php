@@ -183,4 +183,12 @@ class Gzh
 
         return $data;
     }
+
+    /**
+     * @param mixed $openid
+     */
+    public function setOpenid($openid): void
+    {
+        $this->openid = $openid;
+    }
 }
